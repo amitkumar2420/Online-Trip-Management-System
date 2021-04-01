@@ -1,8 +1,6 @@
 package com.capg.service;
 
 import java.util.List;
-
-
 import com.capg.entities.Booking;
 import com.capg.exceptions.BookingNotFoundException;
 

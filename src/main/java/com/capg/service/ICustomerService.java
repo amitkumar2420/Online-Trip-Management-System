@@ -1,8 +1,6 @@
 package com.capg.service;
 
 import java.util.List;
-
-
 import com.capg.entities.Customer;
 import com.capg.exceptions.CustomerNotFoundException;
 import com.capg.exceptions.PackageNotFoundException;
