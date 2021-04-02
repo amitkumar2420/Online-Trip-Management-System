@@ -1,17 +1,43 @@
 package com.capg.tms.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+import com.sun.istack.NotNull;
 
 @Entity
 	public class Admin {
 		
-		@Id
+	@Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
 		private int  adminId;
+	
+	@NotNull
+    @Column(name = "name",nullable = false,length = 50)
 		private String adminName;
-		private  String password;
+	
+	 @NotNull
+	 @Column(name = "pass_word",nullable = false,length = 10)
+	    private String password;
+	 
+	 @NotNull
+	 @Column(name = "email",nullable = false,unique = true,length = 50)
 		private String email;
+	
+	 @NotNull
+	 @Column(name = "contact_no",nullable = false,unique = true,length = 50)
 		private  String mobile;
+	 
+	 
+	@OneToOne()
+	@JoinColumn(name="report_id",referencedColumnName = "reportId")
+	private Report report;
+	
 		public Admin() {
 			super();
 			// TODO Auto-generated constructor stub
