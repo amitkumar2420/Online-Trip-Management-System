@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 
 	public class AdminDTO {
-		
+		 
 		
 		private int  adminId;
 		private String adminName;
