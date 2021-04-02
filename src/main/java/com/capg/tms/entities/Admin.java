@@ -1,5 +1,6 @@
 package com.capg.tms.entities;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -34,9 +35,9 @@ import com.sun.istack.NotNull;
 		private  String mobile;
 	 
 	 
-	@OneToOne()
-	@JoinColumn(name="report_id",referencedColumnName = "reportId")
-	private Report report;
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="user_id",table = "User")
+	private User user;
 	
 		public Admin() {
 			super();
