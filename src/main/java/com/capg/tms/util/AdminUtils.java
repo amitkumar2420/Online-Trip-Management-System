@@ -11,7 +11,7 @@ public  class AdminUtils {
 		{
 			List<AdminDTO> dtolist = new ArrayList<AdminDTO>();
 			for(Admin admin : list)
-				dtolist.add(convertToAdminDto(admin));
+			dtolist.add(convertToAdminDto(admin));
 			return dtolist;
 			
 		}
@@ -21,6 +21,9 @@ public  class AdminUtils {
 			Admin admin = new Admin();
 			admin.setAdminId(dto.getAdminId());
 			admin.setPassword(dto.getPassword());
+			admin.setAdminName(dto.getAdminName());
+			admin.setEmail(dto.getEmail());
+			admin.setMobile(dto.getMobile());
 			return admin;
 		}
 		
@@ -28,6 +31,9 @@ public  class AdminUtils {
 			AdminDTO dto = new AdminDTO();
 			dto.setAdminId(admin.getAdminId());
 			dto.setPassword(admin.getPassword());
+			dto.setAdminName(admin.getAdminName());
+			dto.setEmail(admin.getEmail());
+			dto.setMobile(admin.getMobile());
 			return dto;
 		}
 		
