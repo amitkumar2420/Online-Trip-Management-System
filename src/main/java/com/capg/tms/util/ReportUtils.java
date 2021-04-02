@@ -15,6 +15,7 @@ public class ReportUtils
 	{
 		List<ReportDTO> dtolist = new ArrayList<ReportDTO>();
 		for(Report report : list)
+		dtolist.add(convertToReportDtoList(report));
 		return dtolist;
 		
 	}
