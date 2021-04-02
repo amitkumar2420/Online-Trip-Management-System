@@ -1,21 +1,44 @@
 package com.capg.tms.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.sun.istack.NotNull;
+
 @Entity
 public class PaymentDetails {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="payment_id")
 	private  int paymentId;
+	
+	@NotNull
+	@Column(name="payment_mode", length=25)
 	private  String paymentMode;
+	
+	@NotNull
+	@Column(name="bank_name", length=25)
 	private  String bankName;
+	
+	@NotNull
+	@Column(name="card_no")
 	private  long  cardNo;
+	
+	@NotNull
+	@Column(name="net_amt")
 	private double   netAmount;
+	
+	@NotNull
+	@Column(name="payment_status", length=25)
 	private  String  paymentStatus;
+	
+	@NotNull
+	@Column(name="user_id")
 	private  int userId;
+	
 	public PaymentDetails() {
 		super();
 		// TODO Auto-generated constructor stub
