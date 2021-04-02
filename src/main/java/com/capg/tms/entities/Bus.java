@@ -55,7 +55,7 @@ public class Bus {
 	}
 	public void setTravel(Travels travel) {
 		this.travel = travel;
-	}
+	   }
 	@Override
 	public String toString() {
 		return "Bus [busId=" + busId + ", busType=" + busType + ", busNumber=" + busNumber + ", capacity=" + capacity
