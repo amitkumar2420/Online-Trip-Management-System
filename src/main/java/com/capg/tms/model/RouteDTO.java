@@ -89,12 +89,6 @@ public class RouteDTO {
 	public void setFare(double fare) {
 		this.fare = fare;
 	}
-	@Override
-	public String toString() {
-		return "RouteDTO [routeId=" + routeId + ", routeFrom=" + routeFrom + ", routeTo=" + routeTo + ", buses=" + buses
-				+ ", departureTime=" + departureTime + ", arrivalTime=" + arrivalTime + ", doj=" + doj
-				+ ", pickupPoint=" + pickupPoint + ", fare=" + fare + "]";
-	}
 	
 	
 
