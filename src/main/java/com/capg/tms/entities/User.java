@@ -1,16 +1,25 @@
 package com.capg.tms.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import com.sun.istack.NotNull;
 
 @Entity
 public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int userId;
+	
+	@NotNull    
+	@Column(name = "user_type",nullable = false)
 	private String userType;
+	
+	@NotNull       
+	@Column(name = "pass_word",nullable = false,length = 50)
 	private String password;
 	public User() {
 		super();
