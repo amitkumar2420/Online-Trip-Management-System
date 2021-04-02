@@ -74,6 +74,13 @@ public class Hotel
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	@Override
+	public String toString() {
+		return "Hotel [hotelId=" + hotelId + ", hotelName=" + hotelName + ", hotelType=" + hotelType
+				+ ", hotelDescription=" + hotelDescription + ", address=" + address + ", rent=" + rent + ", status="
+				+ status + "]";
+	}
+	
 	
 	
 }
