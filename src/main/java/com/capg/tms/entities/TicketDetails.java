@@ -18,7 +18,7 @@ public class TicketDetails {
 	private String status;
 	
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name="routeid",table = "route")
+	@JoinColumn(name="routeid",table = "Route")
 	private Route route;
 	
 	public TicketDetails() {

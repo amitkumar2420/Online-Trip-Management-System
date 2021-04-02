@@ -27,11 +27,11 @@ public class Route {
 	private  double fare;
 	
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name="bus_Id",table = "bus")
+	@JoinColumn(name="bus_Id",table = "Bus")
 	private Bus bus;
 	
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name="user_id",table = "user")
+	@JoinColumn(name="user_id",table = "User")
 	private User user;
 	
 	public Route() {
