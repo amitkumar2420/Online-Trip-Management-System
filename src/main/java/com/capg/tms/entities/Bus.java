@@ -1,19 +1,38 @@
 package com.capg.tms.entities;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+import com.sun.istack.NotNull;
 
 @Entity
 public class Bus {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int busId;
+	
+	@NotNull
+	@Column(name="Bus Type",nullable=false)
 	private  String busType;
+	
+	@NotNull
+	@Column(name="Bus Number",nullable=false,unique=true,length=20)
 	private  String busNumber;
+	
+	@NotNull
+	@Column(name="Capacity",nullable=false)
 	private int capacity;
+	
+	@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="travels_id", table="Travels")
 	private Travels travel;
+	
 	public Bus() {
 		super();
 		// TODO Auto-generated constructor stub
