@@ -1,9 +1,12 @@
 package com.capg.tms.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import com.sun.istack.NotNull;
 
 @Entity
 public class Hotel
@@ -11,10 +14,22 @@ public class Hotel
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int hotelId;
+	
+	@NotNull
+    @Column(name = "hotel_name",nullable = false)
 	private String hotelName;
+	
+	@NotNull
+    @Column(name = "hotel_type",nullable = false)
 	private String hotelType;
 	private String hotelDescription;
+	
+	@NotNull
+    @Column(name = "add_ress",nullable = false,length = 100)
 	private String address;
+	
+	@NotNull
+    @Column(name = "re_nt",nullable = false)
 	private double rent;
 	private String status;
 	public Hotel() {
