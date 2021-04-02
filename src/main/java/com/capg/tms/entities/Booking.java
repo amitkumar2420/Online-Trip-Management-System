@@ -1,21 +1,46 @@
 package com.capg.tms.entities;
 
 import java.time.LocalDate;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+import com.sun.istack.NotNull;
 @Entity
 public class Booking {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int bookingId;
-	private String bookingType;
 	private String description;
+	
+	@NotNull
+    @Column(name = "booking_type",nullable = false,length = 10)
+	private String bookingType;
+	
+	
+	@NotNull
+    @Column(name = "booking_title",nullable = false)
 	private String bookingTitle;
+	
 	private  LocalDate bookingDate;
-	private Package pack;
 	private  int userId;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="package_id",table = "Package")
+	private Package pack;
+	
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="user_id",table = "User")
+	private User user;
+	
+	
 	public Booking() {
 		super();
 		// TODO Auto-generated constructor stub
