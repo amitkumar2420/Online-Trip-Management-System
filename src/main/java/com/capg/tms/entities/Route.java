@@ -4,10 +4,13 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 @Entity
 public class Route {
 	
@@ -22,6 +25,15 @@ public class Route {
 	private  LocalDate   doj;
 	private String pickupPoint;
 	private  double fare;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="bus_Id",table = "bus")
+	private Bus bus;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="user_id",table = "user")
+	private User user;
+	
 	public Route() {
 		super();
 		// TODO Auto-generated constructor stub
