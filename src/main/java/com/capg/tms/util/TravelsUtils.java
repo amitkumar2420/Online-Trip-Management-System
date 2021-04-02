@@ -5,6 +5,9 @@ import com.capg.tms.entities.Travels;
 import com.capg.tms.model.TravelsDTO;
 
 public class TravelsUtils {
+	
+	
+	
 
 	public static List<TravelsDTO> convertToTravelsDTOList(List<Travels> list)
 	{
