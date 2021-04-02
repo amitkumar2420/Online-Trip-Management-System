@@ -33,6 +33,7 @@ public class Package {
 		this.ticket = ticket;
 		this.hotel = hotel;
 	}
+	
 	public int getPackageId() {
 		return packageId;
 	}
