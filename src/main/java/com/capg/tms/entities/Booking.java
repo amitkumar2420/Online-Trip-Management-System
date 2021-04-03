@@ -11,7 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
-import com.sun.istack.NotNull;
+
 @Entity
 public class Booking {
 	@Id
@@ -19,12 +19,12 @@ public class Booking {
 	private int bookingId;
 	private String description;
 	
-	@NotNull
+	
     @Column(name = "booking_type",nullable = false,length = 10)
 	private String bookingType;
 	
 	
-	@NotNull
+	
     @Column(name = "booking_title",nullable = false)
 	private String bookingTitle;
 	

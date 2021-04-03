@@ -6,36 +6,34 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import com.sun.istack.NotNull;
 
 @Entity
 public class PaymentDetails {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="payment_id")
 	private  int paymentId;
 	
-	@NotNull
-	@Column(name="payment_mode", length=25)
+	
+	@Column(name="payment_mode",nullable=false)
 	private  String paymentMode;
 	
-	@NotNull
-	@Column(name="bank_name", length=25)
+	
+	@Column(name="bank_name", length=25,unique=true, nullable =false)
 	private  String bankName;
 	
-	@NotNull
-	@Column(name="card_no")
+	
+	@Column(name="card_no",unique=true, length=25)
 	private  long  cardNo;
 	
-	@NotNull
-	@Column(name="net_amt")
+	
+	@Column(name="net_amt", nullable=false)
 	private double   netAmount;
 	
-	@NotNull
-	@Column(name="payment_status", length=25)
+	
+	@Column(name="payment_status", nullable=false)
 	private  String  paymentStatus;
 	
-	@NotNull
+
 	@Column(name="user_id")
 	private  int userId;
 	

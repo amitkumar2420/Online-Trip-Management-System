@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
-import com.sun.istack.NotNull;
+
 
 
 @Entity
@@ -18,24 +18,24 @@ public class Customer {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private  int customerId;
 	
-	@NotNull       
+	       
 	@Column(name = "customer_name",nullable = false,length = 25)
 	private String customerName;
 	
-	@NotNull     
+	   
 	@Column(name = "pass_word",nullable = false,length = 15)
 	private String  customerPassword;
 	
-	@NotNull     
+	     
 	@Column(name = "addr",nullable = false,length = 100)
 	private String address;
 	
-	@NotNull       
-	@Column(name = "mobile_no.",nullable = false,length = 10)
+	      
+	@Column(name = "mobile_no.",nullable = false,unique=true,length = 10)
 	private String mobileNo;
 	
-	@NotNull     
-	@Column(name = "e_mail",nullable = false,length = 50)
+	     
+	@Column(name = "e_mail",nullable = false,unique=true,length = 50)
 	private String email;
 	
 	@OneToOne(cascade = CascadeType.ALL)

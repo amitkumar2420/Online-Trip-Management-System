@@ -9,30 +9,28 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
-import com.sun.istack.NotNull;
+
 
 @Entity
 public class Package {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@NotNull
-	@Column(name="package_id")
 	private int packageId;
 	
-	@NotNull
+	
 	@Column(name="package_name", length=25)
 	private String packageName;
 	
-	@NotNull
+	
 	@Column(name="package_description", length=50)
 	private String packageDescription;
 	
-	@NotNull
+	
 	@Column(name="package_type", length=50)
 	private String packageType;
 	
-	@NotNull
+	
 	@Column(name="package_cost")
 	private double packageCost;
 	

@@ -15,22 +15,24 @@ public class Hotel
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int hotelId;
 	
-	@NotNull
-    @Column(name = "hotel_name",nullable = false)
+	
+    @Column(name = "hotel_name",nullable = false,unique=true)
 	private String hotelName;
 	
-	@NotNull
+	
     @Column(name = "hotel_type",nullable = false)
 	private String hotelType;
 	private String hotelDescription;
 	
-	@NotNull
+	
     @Column(name = "add_ress",nullable = false,length = 100)
 	private String address;
 	
-	@NotNull
+	
     @Column(name = "re_nt",nullable = false)
 	private double rent;
+    
+    @Column(name = "status",nullable = false)
 	private String status;
 	public Hotel() {
 		super();

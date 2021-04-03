@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
-import com.sun.istack.NotNull;
+
 
 @Entity
 public class Bus {
@@ -17,15 +17,15 @@ public class Bus {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int busId;
 	
-	@NotNull
+	
 	@Column(name="Bus Type",nullable=false)
 	private  String busType;
 	
-	@NotNull
+	
 	@Column(name="Bus Number",nullable=false,unique=true,length=20)
 	private  String busNumber;
 	
-	@NotNull
+	
 	@Column(name="Capacity",nullable=false)
 	private int capacity;
 	

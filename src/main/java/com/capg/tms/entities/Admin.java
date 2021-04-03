@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
-import com.sun.istack.NotNull;
+
 
 @Entity
 	public class Admin {
@@ -18,19 +18,19 @@ import com.sun.istack.NotNull;
     @GeneratedValue(strategy = GenerationType.AUTO)
 		private int  adminId;
 	
-	@NotNull
+	
     @Column(name = "name",nullable = false,length = 50)
 		private String adminName;
 	
-	 @NotNull
+	
 	 @Column(name = "pass_word",nullable = false,length = 10)
 	    private String password;
 	 
-	 @NotNull
+	 
 	 @Column(name = "email",nullable = false,unique = true,length = 50)
 		private String email;
 	
-	 @NotNull
+	 
 	 @Column(name = "contact_no",nullable = false,unique = true,length = 50)
 		private  String mobile;
 	 

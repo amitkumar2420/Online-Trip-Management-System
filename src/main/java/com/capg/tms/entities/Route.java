@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,13 +18,22 @@ public class Route {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private String routeId;
+	
+	@Column(name="route_from",nullable=false, length = 20)
 	private String  routeFrom;
+	
+	@Column(name="route_from",nullable=false, length = 20)
 	private String  routeTo;
+	
 	private  List<Bus> buses;
 	private  LocalDateTime  departureTime;
 	private  LocalDateTime   arrivalTime;
 	private  LocalDate   doj;
+	
+	@Column(name="pickup_point",nullable=false, length =20)
 	private String pickupPoint;
+	
+	@Column(name="fa",nullable=false)
 	private  double fare;
 	
 	@OneToOne(cascade = CascadeType.ALL)

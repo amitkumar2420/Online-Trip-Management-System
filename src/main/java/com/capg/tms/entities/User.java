@@ -14,11 +14,11 @@ public class User {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int userId;
 	
-	@NotNull    
+	  
 	@Column(name = "user_type",nullable = false)
 	private String userType;
 	
-	@NotNull       
+	     
 	@Column(name = "pass_word",nullable = false,length = 50)
 	private String password;
 	public User() {

@@ -9,9 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
-import org.hibernate.annotations.Cascade;
 
-import com.sun.istack.NotNull;
 
 @Entity
 public class Travels {
@@ -19,19 +17,19 @@ public class Travels {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int travelsId;
 	
-	@NotNull
+	
 	@Column(name="travels_name",nullable=false,length=50)
 	private String travelsName;
 	
-	@NotNull
+	
 	@Column(name="agent_name",nullable=false,length=50)
 	private String  agentName;
 	
-	@NotNull
+	
 	@Column(name="addr",nullable=false,length=50)
 	private String  address;
 	
-	@NotNull
+	
 	@Column(name="contact",nullable=false,unique=true,length=10)
 	private String  contact;
 	

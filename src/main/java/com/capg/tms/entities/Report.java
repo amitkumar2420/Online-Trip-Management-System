@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
-import com.sun.istack.NotNull;
+
 
 @Entity
 public class Report {
@@ -17,11 +17,11 @@ public class Report {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int reportId;
 	
-	@NotNull
+	
     @Column(name = "report_name",nullable = false,length = 50)
 	private String reportName;
 	
-	@NotNull
+	
     @Column(name = "report_type",nullable = false)
 	private String reportType;
 	

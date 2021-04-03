@@ -16,7 +16,7 @@ public class Feedback {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private String feedbackId;
 	
-	
+
 	private String feedback;
 	private  int rating;
 	private LocalDate submitDate;
