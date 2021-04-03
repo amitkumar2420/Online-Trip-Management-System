@@ -2,6 +2,10 @@ package com.capg.tms.model;
 
 import org.springframework.stereotype.Component;
 
+import com.capg.tms.entities.Hotel;
+import com.capg.tms.entities.PaymentDetails;
+import com.capg.tms.entities.TicketDetails;
+
 @Component
 public class PackageDTO {
 	
@@ -10,15 +14,17 @@ public class PackageDTO {
 	private String packageDescription;
 	private String packageType;
 	private double packageCost;
-	private  PaymentDetailsDTO  payment;
-	private TicketDetailsDTO ticket;
-	private HotelDTO hotel;
+	private  PaymentDetails  payment;
+	private TicketDetails ticket;
+	private Hotel hotel;
+	
+	
 	public PackageDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	public PackageDTO(int packageId, String packageName, String packageDescription, String packageType,
-			double packageCost, PaymentDetailsDTO payment, TicketDetailsDTO ticket, HotelDTO hotel) {
+			double packageCost, PaymentDetails payment, TicketDetails ticket, Hotel hotel) {
 		super();
 		this.packageId = packageId;
 		this.packageName = packageName;
@@ -59,22 +65,22 @@ public class PackageDTO {
 	public void setPackageCost(double packageCost) {
 		this.packageCost = packageCost;
 	}
-	public PaymentDetailsDTO getPayment() {
+	public PaymentDetails getPayment() {
 		return payment;
 	}
-	public void setPayment(PaymentDetailsDTO payment) {
+	public void setPayment(PaymentDetails payment) {
 		this.payment = payment;
 	}
-	public TicketDetailsDTO getTicket() {
+	public TicketDetails getTicket() {
 		return ticket;
 	}
-	public void setTicket(TicketDetailsDTO ticket) {
+	public void setTicket(TicketDetails ticket) {
 		this.ticket = ticket;
 	}
-	public HotelDTO getHotel() {
+	public Hotel getHotel() {
 		return hotel;
 	}
-	public void setHotel(HotelDTO hotel) {
+	public void setHotel(Hotel hotel) {
 		this.hotel = hotel;
 	}
 	@Override

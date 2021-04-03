@@ -3,13 +3,14 @@ package com.capg.tms.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.capg.tms.entities.Booking;
 import com.capg.tms.exceptions.BookingNotFoundException;
 import com.capg.tms.model.BookingDTO;
 import com.capg.tms.repository.IBookingRepository;
 import com.capg.tms.util.BookingUtils;
-
+@Service
 public class BookingServiceImpl implements IBookingService {
 @Autowired
 IBookingRepository bookingRepo;

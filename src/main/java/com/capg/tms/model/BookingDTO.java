@@ -11,14 +11,14 @@ public class BookingDTO {
 	private String description;
 	private String bookingTitle;
 	private  LocalDate bookingDate;
-	private PackageDTO pack;
+	private Package pack;
 	private  int userId;
 	public BookingDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	public BookingDTO(int bookingId, String bookingType, String description, String bookingTitle, LocalDate bookingDate,
-			PackageDTO pack, int userId) {
+			Package pack, int userId) {
 		super();
 		this.bookingId = bookingId;
 		this.bookingType = bookingType;
@@ -58,10 +58,10 @@ public class BookingDTO {
 	public void setBookingDate(LocalDate bookingDate) {
 		this.bookingDate = bookingDate;
 	}
-	public PackageDTO getPack() {
+	public Package getPack() {
 		return pack;
 	}
-	public void setPack(PackageDTO pack) {
+	public void setPack(Package pack) {
 		this.pack = pack;
 	}
 	public int getUserId() {

@@ -10,6 +10,7 @@ public class TravelsDTO {
 	private String  agentName;
 	private String  address;
 	private String  contact;
+	
 	public TravelsDTO() {
 		super();
 		// TODO Auto-generated constructor stub

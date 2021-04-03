@@ -8,6 +8,7 @@ public class ReportDTO {
 	private int reportId;
 	private String reportName;
 	private String reportType;
+	
 	public ReportDTO() {
 		super();
 		// TODO Auto-generated constructor stub

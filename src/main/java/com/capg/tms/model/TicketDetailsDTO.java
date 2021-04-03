@@ -10,6 +10,7 @@ public class TicketDetailsDTO {
 	private String ticketId;
 	private Route route;
 	private String status;
+	
 	public TicketDetailsDTO() {
 		super();
 		// TODO Auto-generated constructor stub

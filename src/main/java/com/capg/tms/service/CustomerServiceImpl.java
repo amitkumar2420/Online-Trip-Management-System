@@ -2,12 +2,14 @@ package com.capg.tms.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.capg.tms.entities.Customer;
 import com.capg.tms.exceptions.CustomerNotFoundException;
 import com.capg.tms.exceptions.PackageNotFoundException;
 import com.capg.tms.exceptions.RouteNotFoundException;
 import com.capg.tms.model.CustomerDTO;
-
+@Service
 public class CustomerServiceImpl implements ICustomerService {
 
 	@Override

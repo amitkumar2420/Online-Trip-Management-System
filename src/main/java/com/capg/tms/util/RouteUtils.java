@@ -30,9 +30,10 @@ public class RouteUtils {
 		route.setRouteFrom(dto.getRouteFrom());
 		route.setRouteId(dto.getRouteId());
 		route.setRouteTo(dto.getRouteTo());
+		return route;
 	}
 	
-	public static RouteDTO convertToRoutedto(Route route) {
+	public static RouteDTO convertToRouteDto(Route route) {
 		RouteDTO dto = new RouteDTO();
 		dto.setArrivalTime(route.getArrivalTime());
 		dto.setBuses(route.getBuses());
@@ -43,6 +44,7 @@ public class RouteUtils {
 		dto.setRouteFrom(route.getRouteFrom());
 		dto.setRouteId(route.getRouteId());
 		dto.setRouteTo(route.getRouteTo());
+		return dto;
 		
 		
 	}

@@ -12,6 +12,8 @@ public class HotelDTO
 	private String address;
 	private double rent;
 	private String status;
+	
+	
 	public HotelDTO() {
 		super();
 		// TODO Auto-generated constructor stub

@@ -8,6 +8,7 @@ public class UserDTO {
 	private int userId;
 	private String userType;
 	private String password;
+	
 	public UserDTO() {
 		super();
 		// TODO Auto-generated constructor stub

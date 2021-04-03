@@ -16,7 +16,6 @@ public class HotelUtils
 		for(Hotel hotel : list)
 		dtolist.add(convertToHotelDto(hotel));
 		return dtolist;
-		
 	}
 	
 	public static Hotel convertToHotel(HotelDTO dto)

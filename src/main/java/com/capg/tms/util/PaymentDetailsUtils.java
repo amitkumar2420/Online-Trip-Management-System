@@ -12,7 +12,7 @@ public class PaymentDetailsUtils {
 	{
 		List<PaymentDetailsDTO> dtolist = new ArrayList<PaymentDetailsDTO>();
 		for(PaymentDetails payment : list)
-		dtolist.add(convertToPaymentDetailsdto(payment));
+		dtolist.add(convertToPaymentDetailsDto(payment));
 		return dtolist;
 		}
 	
@@ -31,7 +31,7 @@ public class PaymentDetailsUtils {
 		return payment;
 	}
 	
-	public static PaymentDetailsDTO convertToBookingDto(PaymentDetails payment) {
+	public static PaymentDetailsDTO convertToPaymentDetailsDto(PaymentDetails payment) {
 		PaymentDetailsDTO dto = new PaymentDetailsDTO();
 		dto.setPaymentId(payment.getPaymentId());
 		dto.setPaymentMode(payment.getPaymentMode());

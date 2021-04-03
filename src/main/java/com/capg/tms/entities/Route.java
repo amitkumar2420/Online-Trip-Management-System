@@ -40,6 +40,18 @@ public class Route {
 	@JoinColumn(name="bus_Id",table = "Bus")
 	private Bus bus;
 	
+	public Bus getBus() {
+		return bus;
+	}
+	public void setBus(Bus bus) {
+		this.bus = bus;
+	}
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="user_id",table = "User")
 	private User user;

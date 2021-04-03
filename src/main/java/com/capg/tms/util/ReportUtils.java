@@ -15,7 +15,7 @@ public class ReportUtils
 	{
 		List<ReportDTO> dtolist = new ArrayList<ReportDTO>();
 		for(Report report : list)
-		dtolist.add(convertToReportDtoList(report));
+		dtolist.add(convertToReportDto(report));
 		return dtolist;
 		
 	}
@@ -30,7 +30,7 @@ public class ReportUtils
 		return report;
 	}
 	
-	public static ReportDTO convertToUserDto(Report report) {
+	public static ReportDTO convertToReportDto(Report report) {
 		ReportDTO dto = new ReportDTO();
 		dto.setReportId(report.getReportId());
 		dto.setReportName(report.getReportName());

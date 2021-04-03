@@ -5,6 +5,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
+
+import com.capg.tms.entities.Bus;
 @Component
 public class RouteDTO {
 	
@@ -12,17 +14,18 @@ public class RouteDTO {
 	private String routeId;
 	private String  routeFrom;
 	private String  routeTo;
-	private  List<BusDTO> buses;
+	private  List<Bus> buses;
 	private  LocalDateTime  departureTime;
 	private  LocalDateTime   arrivalTime;
 	private  LocalDate   doj;
 	private String pickupPoint;
 	private  double fare;
+	
 	public RouteDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public RouteDTO(String routeId, String routeFrom, String routeTo, List<BusDTO> buses, LocalDateTime departureTime,
+	public RouteDTO(String routeId, String routeFrom, String routeTo, List<Bus> buses, LocalDateTime departureTime,
 			LocalDateTime arrivalTime, LocalDate doj, String pickupPoint, double fare) {
 		super();
 		this.routeId = routeId;
@@ -53,10 +56,10 @@ public class RouteDTO {
 	public void setRouteTo(String routeTo) {
 		this.routeTo = routeTo;
 	}
-	public List<BusDTO> getBuses() {
+	public List<Bus> getBuses() {
 		return buses;
 	}
-	public void setBuses(List<BusDTO> buses) {
+	public void setBuses(List<Bus> buses) {
 		this.buses = buses;
 	}
 	public LocalDateTime getDepartureTime() {

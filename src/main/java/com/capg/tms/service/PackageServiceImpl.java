@@ -2,9 +2,11 @@ package com.capg.tms.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.capg.tms.exceptions.PackageNotFoundException;
 import com.capg.tms.model.PackageDTO;
-
+@Service
 public class PackageServiceImpl implements IPackageService {
 
 	@Override

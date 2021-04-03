@@ -23,7 +23,7 @@ public class FeedbackUtils {
 	{
 		Feedback feedback = new Feedback();
 		feedback.setFeedbackId(dto.getFeedbackId());
-		feedback.setcustomer(dto.getCustomer());
+		feedback.setCustomer(dto.getCustomer());
 		feedback.setFeedback(dto.getFeedback());
 		feedback.setRating(dto.getRating());
 		feedback.setSubmitDate(dto.getSubmitDate());
@@ -33,7 +33,7 @@ public class FeedbackUtils {
 	public static FeedbackDTO convertToFeedbackDto(Feedback feedback) {
 		FeedbackDTO dto = new FeedbackDTO();
 		dto.setFeedbackId(feedback.getFeedbackId());
-		dto.setcustomer(feedback.getCustomer());
+		dto.setCustomer(feedback.getCustomer());
 		dto.setFeedback(feedback.getFeedback());
 		dto.setRating(feedback.getRating());
 		dto.setSubmitDate(feedback.getSubmitDate());

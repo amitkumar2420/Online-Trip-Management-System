@@ -11,6 +11,7 @@ public class CustomerDTO {
 	private String address;
 	private String mobileNo;
 	private String email;
+	
 	public CustomerDTO() {
 		super();
 		// TODO Auto-generated constructor stub

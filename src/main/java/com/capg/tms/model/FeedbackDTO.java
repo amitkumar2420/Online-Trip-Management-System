@@ -3,20 +3,24 @@ package com.capg.tms.model;
 import java.time.LocalDate;
 
 import org.springframework.stereotype.Component;
+
+import com.capg.tms.entities.Customer;
 @Component
 public class FeedbackDTO {
 	
 	
 	private String feedbackId;
-	private CustomerDTO customer;
+	private Customer customer;
 	private String feedback;
 	private  int rating;
 	private LocalDate submitDate;
+	
+	
 	public FeedbackDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public FeedbackDTO(String feedbackId, CustomerDTO customer, String feedback, int rating, LocalDate submitDate) {
+	public FeedbackDTO(String feedbackId, Customer customer, String feedback, int rating, LocalDate submitDate) {
 		super();
 		this.feedbackId = feedbackId;
 		this.customer = customer;
@@ -30,10 +34,10 @@ public class FeedbackDTO {
 	public void setFeedbackId(String feedbackId) {
 		this.feedbackId = feedbackId;
 	}
-	public CustomerDTO getCustomer() {
+	public Customer getCustomer() {
 		return customer;
 	}
-	public void setCustomer(CustomerDTO customer) {
+	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}
 	public String getFeedback() {

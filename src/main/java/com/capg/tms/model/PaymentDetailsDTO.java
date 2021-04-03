@@ -12,6 +12,7 @@ public class PaymentDetailsDTO {
 	private double   netAmount;
 	private  String  paymentStatus;
 	private  int userId;
+	
 	public PaymentDetailsDTO() {
 		super();
 		// TODO Auto-generated constructor stub

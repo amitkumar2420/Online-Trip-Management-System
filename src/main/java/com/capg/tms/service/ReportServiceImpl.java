@@ -1,9 +1,11 @@
 package com.capg.tms.service;
 
+import org.springframework.stereotype.Service;
+
 import com.capg.tms.entities.Report;
 import com.capg.tms.exceptions.ReportNotFoundException;
 import com.capg.tms.model.ReportDTO;
-
+@Service
 public class ReportServiceImpl implements IReportService {
 
 	@Override

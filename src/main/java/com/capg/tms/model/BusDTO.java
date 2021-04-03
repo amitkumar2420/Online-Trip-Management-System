@@ -2,6 +2,8 @@ package com.capg.tms.model;
 
 import org.springframework.stereotype.Component;
 
+import com.capg.tms.entities.Travels;
+
 @Component
 public class BusDTO {
 	
@@ -9,12 +11,13 @@ public class BusDTO {
 	private  String busType;
 	private  String busNumber;
 	private int capacity;
-	private TravelsDTO travel;
+	private Travels travel;
+	
 	public BusDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public BusDTO(int busId, String busType, String busNumber, int capacity, TravelsDTO travel) {
+	public BusDTO(int busId, String busType, String busNumber, int capacity, Travels travel) {
 		super();
 		this.busId = busId;
 		this.busType = busType;
@@ -46,10 +49,10 @@ public class BusDTO {
 	public void setCapacity(int capacity) {
 		this.capacity = capacity;
 	}
-	public TravelsDTO getTravel() {
+	public Travels getTravel() {
 		return travel;
 	}
-	public void setTravel(TravelsDTO travel) {
+	public void setTravel(Travels travel) {
 		this.travel = travel;
 	}
 	@Override
