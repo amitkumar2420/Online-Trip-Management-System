@@ -3,9 +3,9 @@ package com.capg.tms.util;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.capg.tms.entities.Route;
+
 import com.capg.tms.entities.TicketDetails;
-import com.capg.tms.model.RouteDTO;
+
 import com.capg.tms.model.TicketDetailsDTO;
 
 public class TicketDetailsUtils {
@@ -21,13 +21,15 @@ public class TicketDetailsUtils {
 		ticketdetails.setRoute(dto.getRoute());
 		ticketdetails.setStatus(ticketdetails.getStatus());
 		ticketdetails.setTicketId(ticketdetails.getTicketId());
+		return ticketdetails;
 		
 	}
-	public static TicketDetailsDTO convertToTicketDetailsdto(TicketDetails ticketdetails) {
+	public static TicketDetailsDTO convertToTicketDetailsDto(TicketDetails ticketdetails) {
 		TicketDetailsDTO dto = new TicketDetailsDTO();
 		dto.setRoute(ticketdetails.getRoute());
 		dto.setStatus(ticketdetails.getTicketId());
 		dto.setTicketId(ticketdetails.getTicketId());
+		return dto;
 	}
 	
 	

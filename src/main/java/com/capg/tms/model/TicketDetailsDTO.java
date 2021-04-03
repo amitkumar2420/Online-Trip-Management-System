@@ -1,20 +1,20 @@
 package com.capg.tms.model;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import org.springframework.stereotype.Component;
+
+import com.capg.tms.entities.Route;
 
 @Component
 public class TicketDetailsDTO {
 	
 	private String ticketId;
-	private RouteDTO route;
+	private Route route;
 	private String status;
 	public TicketDetailsDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public TicketDetailsDTO(String ticketId, RouteDTO route, String status) {
+	public TicketDetailsDTO(String ticketId, Route route, String status) {
 		super();
 		this.ticketId = ticketId;
 		this.route = route;
@@ -26,10 +26,10 @@ public class TicketDetailsDTO {
 	public void setTicketId(String ticketId) {
 		this.ticketId = ticketId;
 	}
-	public RouteDTO getRoute() {
+	public Route getRoute() {
 		return route;
 	}
-	public void setRoute(RouteDTO route) {
+	public void setRoute(Route route) {
 		this.route = route;
 	}
 	public String getStatus() {

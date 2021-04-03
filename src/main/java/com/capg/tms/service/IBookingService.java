@@ -4,14 +4,15 @@ import java.util.List;
 
 import com.capg.tms.entities.Booking;
 import com.capg.tms.exceptions.BookingNotFoundException;
+import com.capg.tms.model.BookingDTO;
 
 public interface IBookingService {
 	
 	
-	public  Booking  makeBooking(Booking booking);
-	public  Booking  cancelBooking(int bookingId) throws BookingNotFoundException;
-	public  Booking  viewBooking(int bookingId)throws BookingNotFoundException;
-	public List<Booking> viewAllBookings();
+	public  BookingDTO  makeBooking(Booking booking);
+	public  BookingDTO  cancelBooking(int bookingId) throws BookingNotFoundException;
+	public  BookingDTO  viewBooking(int bookingId)throws BookingNotFoundException;
+	public List<BookingDTO> viewAllBookings();
 	
 	
 	

@@ -1,18 +1,15 @@
 package com.capg.tms.repository;
 
-import java.util.List;
-
-import com.capg.tms.exceptions.PackageNotFoundException;
 
 
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface IPackageRepository {
+
+
+
+public interface IPackageRepository extends JpaRepository<Package,Integer> {
 	
 	
-	public  Package  addPackage(Package pack);
-	public  Package  deletePackage(int packageId) throws PackageNotFoundException;
-	public  Package  searchPackage(int packageId) throws PackageNotFoundException;
-	public  List<Package> viewAllPackages();
 	
 	
 
